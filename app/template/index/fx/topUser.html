@@ -1,0 +1,13 @@
+<ion-content class="jia-ion-content" style="height: 1000px;">
+	<ion-scroll direction="y" 	style="height: 100%;">
+		<ion-refresher pulling-text="下拉刷新" refreshing-text="正在获取新内容哦~" on-refresh="doFresh()"></ion-refresher>
+			<div class="list">
+				<div class="item item-avatar" ng-repeat="data in user">
+					<img ng-src="{{data.userImg}}"/>
+					<h2>{{data.userName}}</h2>
+					<p>{{data.userDec}}</p>	
+					<button class="button">订阅</button>
+				</div>
+			</div>
+	</ion-scroll>
+</ion-content>

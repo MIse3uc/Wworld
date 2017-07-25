@@ -1,0 +1,28 @@
+<ion-view hide-nav-bar="true">
+	<ion-content controller="fx-content" has-bouncing="true" overflow-scroll="false" style="margin-top: 44px;margin-bottom: 48px;">
+		<ion-refresher pulling-text="上拉刷新" refreshing-text="正在获取新的内容哦~" on-refresh="dofresh()"></ion-refresher>
+		<section class="first-topBanner">
+			<ion-slide-box does-continue="true" auto-play="true" slide-interval="5000">
+				<ion-slide ng-repeat="data in topbanner">
+					<div class="box">
+						<img ng-src="{{data.image}}"/>
+						<h3>{{data.title}}</h3>
+						<p>{{data.dec}}</p>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</section>
+		<h4 class="titlex">
+			每日精选
+		</h4>
+		<section lazy-scroll class="second-bottomBanner">
+			<div class="today-container">
+				<div class="list-card" ng-repeat="data in bottombanner">
+					<div class="list-item">
+						<img class="full-image" image-lazy-src="{{data.image}}" image-lazy-distance-from-bottom-to-load="10" image-lazy-loader="spiral"/>
+					</div>
+				</div>
+			</div>
+		</section>
+	</ion-content>
+</ion-view>

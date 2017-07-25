@@ -1,0 +1,70 @@
+	<ion-header-bar class="bar-dark">
+		<h3 class="title" id="title">Wworld</h3>
+		<button class="button button-icon ion-android-search"></button>
+	</ion-header-bar>
+	<ion-content lazy-scroll style="padding: 0 5px;margin-top: 44px;" has-bouncing="true" overflow-scroll="false" class="has-tabs">
+			<ion-refresher refreshing-text="正在获取新的内容哦~" pulling-text="下拉刷新" on-refresh="dofresh()"></ion-refresher>
+			<section class="Top-banner">
+				<ion-scroll lazy-scroll direction="x" scrollbar-x="false">
+					<div class="loops">
+						<a class="itemx" id="{{data.id}}" ng-repeat="data in toploops" ui-sref="{{data.sref}}" ng-click="topBanner($event,$index)">
+							<div class="image">
+								<div class="image-loader-container"></div>
+								<img image-lazy-src="{{data.image}}" image-lazy-distance-from-right-to-load="20" image-lazy-loader="spiral" />
+							</div>
+							<h4>{{data.title}}</h4>
+							<p>{{data.dec}}</p>
+						</a>
+					</div>
+				</ion-scroll>
+			</section>
+			<div ui-view></div>
+			<section class="Second-banner">
+				<h5 class="titlex">专题分类</h5>
+				<ion-scroll lazy-scroll direction="x" scrollbar-x="false">
+					<div class="loops">
+						<div class="itemc" id="{{data.id}}" ng-repeat="data in midloops">
+							<div class="image">
+								<div class="image-loader-container"></div>
+								<img image-lazy-src="{{data.image}}" image-lazy-distance-from-right-to-load="50" image-lazy-loader="spiral"/>
+								<h4>{{data.title}}</h4>
+								<div class="shade"></div>
+							</div>
+						</div>
+					</div>
+				</ion-scroll>
+			</section>
+			<section class="Third-banner">
+				<h5 class="titlex">每日壁纸</h5>
+				<ion-scroll lazy-scroll direction="x" scrollbar-x="false">
+					<div class="loops">
+						<div class="itemv" id="{{data.id}}" ng-repeat="data in thirdloops">
+							<div class="image">
+								<div class="image-loader-container"></div>
+								<img image-lazy-src="{{data.image}}" image-lazy-loader="spiral" image-lazy-distance-from-right-to-load="50" />
+								<h4>{{data.title}}</h4>
+								<h3>{{data.dec}}</h3>
+							</div>
+						</div>
+					</div>
+				</ion-scroll>
+			</section>
+			<section class="Four-banner">
+				<h5 class="titlex">今日推荐</h5>
+				<div class="today-container">
+					<div class="list-card" ng-repeat="data in fourloops" id="{{data.id}}">
+						<div class="list-item">
+							<img class="full-image" image-lazy-src="{{data.image}}"/>
+							<!--<video width="200" ng-show="{{data.vdoshow}}" src="{{data.video}}">
+								<div class="play iconfont" ng-click="play($event)"><i></i></div>
+							</video>-->
+							<p>{{data.title}}</p>
+							<p>
+								<a href="" class="subdued">#{{data.author}}</a>
+								<a href="" class="subdued"><i class="iconfont icon-guankanrenshu"></i> {{data.watchPeople}}</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+	</ion-content>

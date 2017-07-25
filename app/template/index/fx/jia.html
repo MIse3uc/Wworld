@@ -1,0 +1,61 @@
+<ion-view view-title="添加订阅">
+	<ion-content scroll="false" class="jia-ion-content">
+		<div class="share">
+			<button class="button">asdsad</button>
+		</div>
+		<div class="jia-content">
+			<label for="" class="item-input-wrapper">
+				<i class="iconfont icon-sousuo01 search"></i>
+				<input class="text-center" type="search" placeholder="搜索用户昵称" name="" id="" value="" />
+			</label>
+			<div class="list" style="margin-bottom: 0;">
+				<a class="item item-thumbnail-left">
+					<img src="img/001.jpg"/>
+					<h3>记得把本来视界分享给小伙伴哦~</h3>
+				</a>
+				<div class="item item-divider">推荐用户</div>
+			</div>
+		</div>
+		<div class="jia-bottom-content">
+			<ion-scroll direction="y" scroll-height scrollbar-y="false" style="height: 100%;">
+				<ion-refresher pulling-text="下拉刷新" refreshing-text="正在获取新内容哦~" on-refresh="doFresh()"></ion-refresher>
+				<div class="list">
+					<div class="item item-avatar" ng-repeat="data in user">
+						<img ng-src="{{data.userImg}}"/>
+						<h2>{{data.userName}}</h2>
+						<p>{{data.userDec}}</p>	
+						<button class="button">订阅</button>
+					</div>
+				</div>
+			</ion-scroll>	
+		</div>	
+	</ion-content>
+	<script id="modal.html" type="text/ng-template">
+        <ion-content style="background: rgba(0,0,0,0.5);color: #fff;" ng-click="closeModal()">
+            <div class="iconz">
+            	<div><i class="iconfont icon-icon"></i></div>
+                <div><i class="iconfont icon-icon"></i></div>
+                <div><i class="iconfont icon-icon"></i></div>
+            </div>
+            </ion-content>
+	</script>
+	
+	
+</ion-view>	
+	
+<!--<ion-content scroll="false">
+    <div class="t-result">
+        当前选择：A/B
+    </div>
+    <ion-scroll direction="y" class="pList-scroll">
+        <div class="list">
+						<div class="item item-avatar" ng-repeat="data in user">
+							<img ng-src="{{data.userImg}}"/>
+							<h2>{{data.userName}}</h2>
+							<p>{{data.userDec}}</p>	
+							<button class="button">订阅</button>
+						</div>
+					</div>
+    </ion-scroll>
+    
+</ion-content>-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style/ionic.css"/>
+		<link rel="stylesheet" type="text/css" href="style/style.css"/>
+		<link rel="stylesheet" type="text/css" href="style/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="style/fx-style.css"/>
+		<link rel="stylesheet" type="text/css" href="style/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="style/store.css"/>
+		<script src="framework/require.min.js" async="async" data-main="js/main"></script>
+	</head>
+
+	<body>
+		<div class="container" id="container" ng-controller="content">
+			<ion-tabs class="tabs-dark tabs-icon-top">
+				<ion-tab title="专题" icon="iconfont icon-sheying" ui-sref="zt" ></ion-tab>
+				<ion-tab title="发现" icon="iconfont icon-iconfontzhizuobiaozhun07" ui-sref="fx"></ion-tab>
+				<ion-tab title="商城" icon="iconfont icon-shangcheng1" ui-sref="sc"></ion-tab>
+				<ion-tab title="我的" icon="iconfont icon-weibiaoti3" ui-sref="wd"></ion-tab>
+			</ion-tabs>
+			<div ui-view></div>
+		</div>
+	</body>
+</html>

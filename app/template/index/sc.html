@@ -1,0 +1,77 @@
+<ion-view class="sc" hide-nav-bar="true" ng-controller="Store">
+	<ion-content has-bouncing="true" overflow="false" style="margin-bottom: 50px;">
+		<ion-header-bar style="display: flex;z-index: 9999;">
+			<div class="location">
+				<button class="button-clear">
+					<span>广州</span>
+				</button>
+			</div>
+			<div class="searchContainer">
+				<label for="" class="item-input-wrapper">
+					<input type="search" placeholder="搜索喜欢的宝贝" class="text-center" />
+				</label>
+			</div>
+			<div class="shoppingCar">
+				<button class="button-clear">
+					<i class="iconfont icon-shangcheng"></i>
+				</button>
+			</div>
+		</ion-header-bar>
+		<section class="first-banner">
+			<ion-slide-box does-continue="true" auto-play="true" slide-interval="5000">
+				<ion-slide ng-repeat="data in sctopbanner">
+					<div class="box">
+						<img ng-src="{{data.image}}"/>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</section>
+		<section class="second-nav">
+			<div class="nav-list">
+				<div class="nav" id="{{data.id}}" ng-repeat="data in scnav">
+					<i class="iconfont {{data.icon}}"></i>
+					<p>{{data.title}}</p>
+				</div>
+			</div>
+		</section>
+		<section lazy-scroll class="third-list">
+			<div class="list">
+				<div class="item item-divider">
+					新鲜特卖
+				</div>
+				<div class="fresh-sell">
+					<div class="list-item" ng-repeat="data in freshSell">
+						<img class="full-image" image-lazy-src="{{data.images}}" image-lazy-distance-from-bottom-to-load="50" image-lazy-loader="spiral"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="four-list">
+			<div class="item item-divider">
+				五月推荐
+			</div>
+			<ion-scroll lazy-scroll has-bouncing="true" direction="x" scrollbar-x="false">
+				<div class="loops">
+					<div class="itemz" ng-repeat="data in Recommend">
+						<img image-lazy-src="{{data.images}}" image-lazy-distance-from-right-to-load="50" image-lazy-loader="spiral"/>
+					</div>
+				</div>
+			</ion-scroll>
+		</section>
+		<section lazy-scroll class="five-list">
+			<div class="item item-divider">
+				拍摄设备
+			</div>
+			<div class="item-shop-container">
+				<div class="item-shop" ng-click="enterDetailPages($event)" ng-repeat="data in shEqum" ui-sref="sc.xqy">
+					<img image-lazy-src="{{data.images}}" image-lazy-distance-from-bottom-to-load="50" image-lazy-loader="spiral"/>
+					<span class="price">
+						<h2 class="shopTitle">{{data.title}}</h2>
+						<p>{{data.price}}/元</p>
+					</span>
+				</div>
+			</div>
+		</section>
+	</ion-content>
+</ion-view>
+<div ui-view></div>

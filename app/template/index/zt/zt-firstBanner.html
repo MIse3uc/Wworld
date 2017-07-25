@@ -1,0 +1,36 @@
+<ion-header-bar class="bar-dark firstBanner-header">
+	<button class="button-clear" ng-click="Back()">
+		<i class="iconfont icon-zhuanfa1"></i>
+	</button>
+	<h2 class="title">你是最好的啊啊啊</h2>
+	<button class="button-clear">
+		<i class="iconfont icon-zhuanfa1"></i>
+	</button>
+</ion-header-bar>
+<ion-content lazy-scroll class="firstBanner" style="margin-top: 44px;margin-bottom: 48px;">
+	<!--<div class="list card">
+		<div class="item item-avatar">
+			<img src="img/img1.jpg"/>
+			<h2>MIse</h2>
+			<p>2017/05/11</p>
+		</div>
+		<div class="item item-body">
+			<img class="full-image" src="img/002.jpg"/>
+			<p>来段旅行怎么样？</p>
+		</div>
+	</div>-->
+
+	<div class="card" ng-repeat="data in ztTopbanner track by $index">
+		<!--<div class="item item-avatar">
+			<img src="img/img2.jpg"/>
+			<h2>MIse</h2>
+			<p>2017.05.11</p>
+		</div>-->
+		<div class="item item-text-wrap">
+			{{data.title}}
+		</div>
+		<div class="item-image">
+			<img ng-repeat="x in data.image" image-lazy-src="{{x}}" image-lazy-distance-from-bottom-to-load="100"/>
+		</div>
+	</div>
+</ion-content>

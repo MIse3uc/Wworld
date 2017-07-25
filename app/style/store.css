@@ -1,0 +1,25 @@
+/*
+* @Author: MIse
+* @Date:   2017-06-08 10:09:29
+* @Last Modified by:   MIse
+* @Last Modified time: 2017-06-12 19:48:09
+*/
+
+.storeHeader .button-clear{
+	color: #fff;
+}
+.storeHeader .iconfont{
+	line-height: 46px;
+	margin-left: 10px;
+	font-size: 20px;
+}
+.store.banner{
+	height: 300px;
+	width: 200px;
+}
+.store .banner img{
+	width: 100%;
+}
+.banner_text{
+    color:#fff;
+}

@@ -1,0 +1,230 @@
+/*=============发现----精选=============*/
+/*banner---最上*/
+.box img{
+	width: 100%;
+	max-height: 400px;
+}
+.box:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -5px;
+}
+.box h3,.box p{
+	position: absolute;
+	left: 50%;
+	color: rgba(255,255,255,1);
+	z-index: 10;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 200px;
+	margin-left: -100px;
+	text-align:center;
+}
+.box h3{
+	top: 20%;
+}
+.box p{
+	top: 42%;
+}
+.slider-pager i{
+	color: #fff;
+}
+a{
+	color: transparent;
+}
+.jia{
+	max-width: 150px;
+    height: 100%;
+    text-align: center;
+}
+.jia i{
+	color: #fff;
+	font-size: 16px;
+}
+.has-header{
+	top: 0;
+}
+/*banner---最上---点击进入的页面*/
+.firstBanner-header .iconfont{
+	color: #fff;
+	font-size: 20px;
+}
+.firstBanner-header .title{
+	text-align: center !important;
+}
+.firstBanner-header{
+	padding: 0 20px;
+}
+.firstBanner-header button{
+	position: absolute;
+	top: 5px;
+}
+.firstBanner-header button:last-of-type{
+	position: absolute;
+	right: 20px;
+}
+.firstBanner .item-image{
+	column-count: 2;
+	column-gap: 6px;
+	padding: 6px;
+	padding-top: 10px;
+}
+.firstBanner .item-image img{
+	width: 100%;
+	vertical-align: initial;
+	float: left;
+	padding-top: 3px;
+}
+.firstBanner .item-text-wrap{
+	color:#fff;
+	background:#444;
+	border-color:#666;
+}
+.firstBanner .item-image,.firstBanner .card{
+	background:#444;
+}
+.firstBanner .card{
+
+}
+/*每日精选---最下*/
+.second-bottomBanner .today-container{
+	column-gap: 3px;
+	
+}
+.second-bottomBanner .today-container .list-item{
+	max-height: 115px;
+	overflow: hidden;
+	margin-bottom: 3px;
+}
+
+/*=============发现----+加=============*/
+/*模态框分享*/
+.share{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	z-index: 9999;
+}
+.jia-ion-content{
+	margin-top: 44px;
+	height: 100%;
+}
+.jia-content .item-input-wrapper{
+	background: #fff;
+}
+/*加号--添加订阅--上面input的背景色*/
+.jia-content .item-input-wrapper input{
+	width: 100%;
+	background: #262626;
+	color: #fff;
+}
+.jia-content i{color: #fff;}
+.jia-content label{
+	border-radius: 0;
+	background: #262626 !important;
+}
+/*End*/
+/*加号--添加订阅--分享用户 底色*/
+.jia-content .list a{
+	background: #262626;
+}
+/*加号--添加订阅--推荐用户 底色*/
+.jia-content .item{
+	background: #262626;
+	color: #fff;
+	border-color: #666;
+}
+.bar .back-button{
+	border: none;
+	width: 17%;
+	font-size: 17px;
+}
+.bar .title{
+	text-align: center !important;
+	font-size: 16px !important;
+}
+.platform-android .bar .title{
+	left: 0 !important;
+}
+.jia-content .list a:after{
+	content: "\e639";
+	position: absolute;
+	top: 50%;
+	right: 3%;
+	margin-top: -12px;
+	font-family:"iconfont" !important;
+}
+.jia-content .list a img{
+	max-width: 95px;
+}
+.jia-content .list h3{
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+	font-size: 16px;
+	color: #b7b2b2;
+	left: 30%;
+}
+/*加号--添加订阅--下面User的底色*/
+.jia-bottom-content .item{
+	padding-left: 82px;
+	background: #262626;
+	border-color: #666;
+}
+.jia-bottom-content{
+	height: 100%;
+	padding-bottom: 265px;  /*添加订阅部分，因为只要计算他这一部分的高度，不需要其余部分的高度，所以取这个值*/
+}
+.jia-bottom-content .item h2{color: #fff;}
+.jia-bottom-content .item p{color: #b7b2b2;}
+.jia-bottom-content .item img{
+	max-height: 50px;
+	max-width: 50px;
+	top: 11px;
+}
+.jia-bottom-content button{
+	position: absolute;
+	right: 3%;
+	top: 50%;
+	margin-top: -17px;
+	max-width: 105px;
+	min-width: 50px;
+	min-height: 30px;
+	height: 30px;
+	line-height: 14px;
+	background: #f6dc88;
+	font-size: 14px;
+}
+.item-avatar .date{
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	margin-top: -15px;
+}
+.toolsBar{
+	display: flex;
+}
+.toolsBar>a{
+	flex: 1;
+	text-align: center;
+}
+.toolsBar>a:not(:last-of-type){
+	border-right: 1px solid #D1D3D6;
+}
+.toolsBar>a>i{
+	font-size: 20px;
+	position: relative;
+	top: 3px;
+}
+.toolsBar .love{
+	top: 1px;
+}
